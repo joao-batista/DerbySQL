@@ -44,7 +44,7 @@ public class View extends JDialog {
 	private JScrollPane scroll;
 	private Container contentPane;
 	private JToolBar barraDeBotoes;
-	private JButton btnCopiar;
+	private JButton btnFechar;
 	private Point point;
 
 	public View(Point point) {
@@ -68,14 +68,14 @@ public class View extends JDialog {
 		scroll = new JScrollPane();
 		scroll.setViewportView(texto);
 		//
-		// btnCopiar
+		// btnFechar
 		//
-		this.btnCopiar = new JButton();
-		this.btnCopiar.setBackground(Color.GRAY);
-		this.btnCopiar.setFocusPainted(false);
-		this.btnCopiar.setToolTipText("Fechar");
-		this.btnCopiar.setIcon(Recursos.carregarIcone(Constantes.FECHAR));
-		this.btnCopiar.addActionListener(new ActionListener() {
+		this.btnFechar = new JButton();
+		this.btnFechar.setBackground(Color.GRAY);
+		this.btnFechar.setFocusPainted(false);
+		this.btnFechar.setToolTipText("Fechar");
+		this.btnFechar.setIcon(Recursos.carregarIcone(Constantes.FECHAR));
+		this.btnFechar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				close();
 			}
@@ -86,7 +86,7 @@ public class View extends JDialog {
 		this.barraDeBotoes = new JToolBar();
 		this.barraDeBotoes.setBackground(Color.GRAY);
 		this.barraDeBotoes.setFloatable(false);
-		this.barraDeBotoes.add(btnCopiar);
+		this.barraDeBotoes.add(btnFechar);
 		this.barraDeBotoes.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
 
 		//
